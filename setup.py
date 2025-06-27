@@ -29,7 +29,7 @@ setup(
             'gnss_node = catamaran_ros.gnss_node:main',
             'ultrasonic_waterproof_node = catamaran_ros.ultrasonic_waterproof_node:main',
             'ultrasonic_node = catamaran_ros.ultrasonic_node:main',
-            'voltage_and_current_node = catamaran_ros.voltage_and_current_node:main',
+            #'voltage_and_current_node = catamaran_ros.voltage_and_current_node:main',
             #'power_distribution_board_node = catamaran_ros.power_distribution_board_node:main',
 
             # Thruster Control
