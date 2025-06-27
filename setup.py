@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'autonomous_catamaran'
+package_name = 'catamaran_ros'
 
 setup(
     name=package_name,
@@ -25,24 +25,24 @@ setup(
     entry_points={
         'console_scripts': [
             # Sensor Nodes
-            'imu_node = autonomous_catamaran.imu_node:main',
-            'gnss_node = autonomous_catamaran.gnss_node:main',
-            'ultrasonic_waterproof_node = autonomous_catamaran.ultrasonic_waterproof_node:main',
-            'ultrasonic_servo_node = autonomous_catamaran.ultrasonic_servo_node:main',
-            'voltage_and_current_node = autonomous_catamaran.voltage_and_current_node:main',
-            'power_distribution_board_node = autonomous_catamaran.power_distribution_board_node:main',
+            'imu_node = catamaran_ros.imu_node:main',
+            'gnss_node = catamaran_ros.gnss_node:main',
+            'ultrasonic_waterproof_node = catamaran_ros.ultrasonic_waterproof_node:main',
+            'ultrasonic_node = catamaran_ros.ultrasonic_node:main',
+            'voltage_and_current_node = catamaran_ros.voltage_and_current_node:main',
+            #'power_distribution_board_node = catamaran_ros.power_distribution_board_node:main',
 
             # Thruster Control
-            'thruster_control = autonomous_catamaran.thruster_control:main',
-            'teleop_thruster = autonomous_catamaran.teleop_thruster:main',
-            'pwm_output = autonomous_catamaran.pwm_output:main',
+            'thruster_control = catamaran_ros.thruster_control:main',
+            'teleop_thruster = catamaran_ros.teleop_thruster:main',
+            'pwm_output = catamaran_ros.pwm_output:main',
 
             # Telemetry & Failsafe
-            'telemetry_node = autonomous_catamaran.telemetry_node:main',
-            'return_to_home_node = autonomous_catamaran.return_to_home_node:main',
+            'telemetry_node = catamaran_ros.telemetry_node:main',
+            'return_to_home_node = catamaran_ros.return_to_home_node:main',
 
             # Obstacle Avoidance
-            'obstacle_avoidance_node = autonomous_catamaran.obstacle_avoidance_node:main',
+            'obstacle_avoidance_node = catamaran_ros.obstacle_avoidance_node:main',
         ],
     },
 )
