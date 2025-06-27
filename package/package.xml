@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>autonomous_catamaran</name>
+  <version>1.0.0</version>
+  <description>ROS 2 Humble package for complete autonomous navigation and control of an unmanned surface vehicle (USV) with integrated sensors, thruster control, and obstacle avoidance.</description>
+
+  <maintainer email="shazhijazy@gmail.com">Shazin Hijazy</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build tools -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- Core ROS 2 dependencies -->
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf_transformations</depend>
+  <depend>builtin_interfaces</depend>
+
+  <!-- Sensor and hardware-specific drivers -->
+  <depend>phidgets_spatial</depend>          <!-- IMU -->
+  <depend>rplidar_ros</depend>               <!-- LiDAR -->
+  <depend>nmea_navsat_driver</depend>        <!-- GNSS -->
+
+  <!-- Navigation stack -->
+  <depend>nav2_bringup</depend>
+  <depend>nav2_msgs</depend>
+  <depend>slam_toolbox</depend>
+  <depend>robot_localization</depend>
+
+  <!-- Teleoperation -->
+  <depend>teleop_twist_keyboard</depend>
+
+  <!-- Launch system -->
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+
+  <!-- Visualization -->
+  <depend>rviz2</depend>
+
+  <!-- Diagnostics -->
+  <depend>diagnostic_updater</depend>
+
+  <!-- Export -->
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+
